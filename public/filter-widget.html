@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Filter widget</title>
-	<link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-	<h1>Filter widget</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Filter widget</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"
+      integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
+      integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs="
+      crossorigin="anonymous"
+    ></script>
+    <script type="template-x" class="filterTemplate">
+      <ul>
+      	{{#each item}}
+      		<li>
+      			<b>{{this.make}} {{this.model}}</b> <br>
+      			Colour: {{this.color}} <br>
+      			Registration: {{this.reg_number}} <br>
+      			Price: R{{this.price}}
+      		</li>
+      	{{/each}}
+      </ul>
+    </script>
+  </head>
+  <body>
+    <h1>Filter widget</h1>
+    <div>
+      <select class="brandSelect">
+        <option value="Any">Any</option>
+        <option value="Volkswagen">Volkswagen</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Ford">Ford</option>
+      </select>
+    </div>
+    <div>
+      <select class="colorSelect">
+        <option value="Any">Any</option>
+        <option value="Blue">Blue</option>
+        <option value="Red">Red</option>
+        <option value="Orange">Orange</option>
+        <option value="White">White</option>
+        <option value="Grey">Grey</option>
+      </select>
+    </div>
+    <br />
+    <button class="submitFilter">Filter</button>
+    <br />
+    <div class="filterDisplay"></div>
+  </body>
+  <script src="filterApp.js"></script>
 </html>
