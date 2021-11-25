@@ -9,7 +9,7 @@ const colorTemplate = Handlebars.compile(colorTemplateText.innerText);
 const carsTemplate = Handlebars.compile(carsTemplateText.innerText);
 
 axios
-    .get('http://api-tutor.herokuapp.com/v1/colors')
+    .get('https://api-tutor.herokuapp.com/v1/colors')
     .then((result) => {
         console.log(result.data);
 
@@ -19,7 +19,7 @@ axios
     })
 
 axios
-    .get('http://api-tutor.herokuapp.com/v1/makes')
+    .get('https://api-tutor.herokuapp.com/v1/makes')
     .then((result) => {
         console.log(result.data);
 
@@ -29,7 +29,7 @@ axios
     })
 
 axios
-    .get('http://api-tutor.herokuapp.com/v1/cars')
+    .get('https://api-tutor.herokuapp.com/v1/cars')
     .then((result) => {
         console.log(result.data);
 

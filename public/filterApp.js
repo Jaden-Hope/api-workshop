@@ -9,7 +9,7 @@ const filterTemplate = Handlebars.compile(filterTemplateText);
 
 submitBtn.addEventListener('click', () => {
     axios
-        .get('http://api-tutor.herokuapp.com/v1/cars')
+        .get('https://api-tutor.herokuapp.com/v1/cars')
         .then((result) => {
             const colorFilter = filterColorElem.value
             const brandFilter = filterBrandElem.value
