@@ -27,19 +27,18 @@
       </ul>
     </script>
 
-	<script type="template-x" class="carsTemplate">
-		<ul>
-			{{#each item}}
-				<li>
-					<b>{{this.make}} {{this.model}}</b> <br>
-					Colour: {{this.color}} <br>
-					Registration: {{this.reg_number}} <br>
-					Price: R{{this.price}}
-				</li>
-			{{/each}}
-		</ul>
-	</script>
-
+    <script type="template-x" class="carsTemplate">
+      <ul>
+      	{{#each item}}
+      		<li>
+      			<b>{{this.make}} {{this.model}}</b> <br>
+      			Colour: {{this.color}} <br>
+      			Registration: {{this.reg_number}} <br>
+      			Price: R{{this.price}}
+      		</li>
+      	{{/each}}
+      </ul>
+    </script>
   </head>
   <body>
     <h1>Car info</h1>
