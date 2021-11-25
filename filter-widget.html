@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Filter widget</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./public/style.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"
       integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg="
@@ -17,16 +17,24 @@
       crossorigin="anonymous"
     ></script>
     <script type="template-x" class="filterTemplate">
-      <ul>
+      <table>
+        <tr>
+          <th><b>Make </b></th>
+          <th><b>Model</b></th>
+          <th><b>Color</b></th>
+          <th><b>Registration</b></th>
+          <th><b>Price</b></th>
+        </tr>
        {{#each item}}
-        	<li>
-      			<b>{{this.make}} {{this.model}}</b> <br>
-          	Colour: {{this.color}} <br>
-            Registration: {{this.reg_number}} <br>
-      		  Price: R{{this.price}}
-      	  </li>
+        	<tr>
+      			<td>{{this.make}} </td>
+            <td>{{this.model}}</td>
+            <td>{{this.color}}</td>
+            <td>{{this.reg_number}}</td>
+      		  <td>R{{this.price}}</td>
+      	  </tr>
         {{/each}}
-      </ul>
+      </table>
     </script>
   </head>
   <body>
