@@ -39,7 +39,8 @@
   <body>
     <h1>Filter widget</h1>
     <div>
-      <select class="brandSelect">
+      <label for="brandSelect">Select Brand:</label>
+      <select class="brandSelect" name="brandSelect">
         <option value="Any">Any</option>
         <option value="Volkswagen">Volkswagen</option>
         <option value="Toyota">Toyota</option>
@@ -47,8 +48,10 @@
         <option value="Ford">Ford</option>
       </select>
     </div>
+    <br>
     <div>
-      <select class="colorSelect">
+      <label for="colorSelect">Select Color:</label>
+      <select class="colorSelect" name="colorSelect">
         <option value="Any">Any</option>
         <option value="Blue">Blue</option>
         <option value="Red">Red</option>
@@ -60,6 +63,7 @@
     <br />
     <button class="submitFilter">Filter</button>
     <br />
+    <br>
     <div class="filterDisplay"></div>
   </body>
   <script src="./public/filterApp.js"></script>
